@@ -8,7 +8,7 @@
 preferred_shell=${1-DEFAULT}
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc gitconfig selected_editor zshrc"    # list of files/folders to symlink in homedir
+files="bashrc gitconfig oh-my-zsh selected_editor zshrc"    # list of files/folders to symlink in homedir
 
 ##########
 
