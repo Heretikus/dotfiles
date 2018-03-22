@@ -11,7 +11,7 @@ fpath=($HOME/dotfiles/completions $fpath)
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="avit"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -134,22 +134,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 
-if [[ -n $SSH_CONNECTION ]]; then
-echo " .... remote session `echo $USER`@`hostname` .... "
-#PROMPT="%{$fg_bold[yellow]%}⇕ ${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)"
-PROMPT=$'%{$fg[yellow]%}┌%{$fg_bold[yellow]%}[⇕]%{$reset_color%}$fg[yellow]%}[%{$fg[cyan]%}%c%{$reset_color%}%{$fg[yellow]%}]> %{$(git_prompt_info)%}%(?,,%{$fg[yellow]%}[%{$fg_bold[white]%}%?%{$reset_color%}%{$fg[yellow]%}])
-%{$fg[yellow]%}└──${ret_status}%{$reset_color%}'
-PS2=$' %{$fg[green]%}|>%{$reset_color%} '
-
-else
-PROMPT=$'%{$fg[yellow]%}┌[%{$fg[cyan]%}%c%{$reset_color%}%{$fg[yellow]%}]> %{$(git_prompt_info)%}%(?,,%{$fg[yellow]%}[%{$fg_bold[white]%}%?%{$reset_color%}%{$fg[yellow]%}])
-%{$fg[yellow]%}└──${ret_status}%{$reset_color%}'
-PS2=$' %{$fg[green]%}|>%{$reset_color%} '
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}[%{$fg_bold[white]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%{$fg[yellow]%}] "
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[yellow]%}⚡%{$reset_color%}"
-fi
 
 # Anything locally specific?
 if [[ -f ${HOME}/.zshrc.local ]]; then source ${HOME}/.zshrc.local; fi
