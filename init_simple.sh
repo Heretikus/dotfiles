@@ -55,6 +55,7 @@ else
     if [[ $platform == 'Linux' ]]; then
         sudo apt-get install zsh -y
         install_zsh
+        sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
         echo "Please install zsh, then re-run this script!"
